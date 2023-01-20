@@ -1,3 +1,7 @@
+use std::path::Path;
+
+mod tamper;
+
 fn main() {
-    println!("Hello, world!");
+    tamper::protect(Path::new("./hypr"));
 }
