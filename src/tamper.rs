@@ -3,7 +3,7 @@ use notify::{Watcher, RecommendedWatcher, Config};
 
 use notify::{Event, EventKind, RecursiveMode};
 
-pub fn protect(path: &'static Path) {
+pub fn protect(path: &Path) {
     let (tx, rx) = std::sync::mpsc::channel();
     let mut watcher = RecommendedWatcher::new(tx, Config::default())
     .unwrap();
